@@ -1,5 +1,23 @@
 # JSDOM + UVU repro
 
+https://github.com/lukeed/uvu/issues/140
+
+## Fix
+
+https://github.com/lukeed/uvu/issues/124#issuecomment-912070397
+
+```js
+test.after(() => {
+  setTimeout(() => {
+    process.exit(0)
+  }, 100)
+})
+```
+
+---
+
+## Issue 
+
 Reproduction of hanging `uvu` test
 
 ```
