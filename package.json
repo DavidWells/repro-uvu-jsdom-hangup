@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "uvu -r @swc-node/register -r global-jsdom/register -r mock-css-modules src/__tests__/"
+    "test": "uvu src/__tests__/ -r @swc-node/register -r global-jsdom/register -r mock-css-modules"
   },
   "keywords": [],
   "author": "DavidWells",

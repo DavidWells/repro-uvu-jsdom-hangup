@@ -18,12 +18,21 @@ test("Renders component in test", async () => {
         <div>outside</div>
       </>
     );
-  };
+  }
 
   const result = render(<MyComponent />)
-  assert.ok(result)
+  assert.ok(MyComponent)
   console.log('result.container.innerHTML', result.container.innerHTML)
   assert.match(result.container.innerHTML, 'inside')
 })
+
+// The Fix https://github.com/lukeed/uvu/issues/124#issuecomment-912070397
+/*
+test.after(() => {
+  setTimeout(() => {
+    process.exit(0)
+  }, 100)
+}) 
+/**/
 
 test.run()
